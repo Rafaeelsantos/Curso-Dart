@@ -1,6 +1,6 @@
 void main() {
-  List<int> sequencia = [1, 2, 4, 5, 6]; // Substitua pela sequência dada
-  int n = 6; // Substitua pelo valor máximo da sequência
+  List<int> sequencia = [1, 2, 3, 7, 5, 8];
+  int n = 6;
 
   int numeroFaltando = encontrarNumeroFaltando(sequencia, n);
 
@@ -21,5 +21,5 @@ int encontrarNumeroFaltando(List<int> sequencia, int n) {
     }
   }
 
-  return -1; // Nenhum número está faltando ou a sequência está incorreta
+  return -1;
 }
