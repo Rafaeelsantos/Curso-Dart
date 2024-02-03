@@ -1,19 +1,27 @@
-void main(){
-  int numero = 2;
-  
-  if (ehPrimo(numero)) {
-    print("$numero é um número primo.");
-  } else {
-    print("$numero não é um número primo");
-  } 
-}
+import 'dart:io';
 
-bool ehPrimo(int numero) {
-  if (numero < 2) return false; // Números menores que 2 não são primos!
+void main() {
+
+  stdout.write("\nInforme um número: ");
+
+  var linha = stdin.readLineSync()!;
+  var valor = int.parse(linha);
+
+   bool numeroPrimo(int valor) {
+  if (valor < 2) return false;
   
-  for (int i = 2; i <= numero ~/ 2; i++) {
-    if (numero % i == 0) return false; // Se é divisével por algum número, não é primo! 
+  for (int i = 2; i <= valor ~/ 2; i++) {
+    if (valor % i == 0) return false;
   }
   
-  return true; // Se não foi encontrado nenhum divisor, é primo!
+  return true;
+}
+
+  if (numeroPrimo(valor)) {
+    print("$valor é um número primo.\n");
+  }
+
+  else {
+    print("$valor não é um número primo.\n");
+  }
 }
