@@ -1,12 +1,22 @@
-void main() {
-  String palavra = "teste"; // Substitua pela palavra desejada
-  bool ehPalindromo = verificarPalindromo(palavra.toLowerCase());
+import 'dart:io';
 
-  if (ehPalindromo) {
-    print("$palavra é um palíndromo.");
-  } else {
-    print("$palavra não é um palíndromo.");
-  }
+void main() {
+
+  stdout.write("\nDigite aqui: ");
+
+    var linha = stdin.readLineSync()!;
+    var entrada = (linha);
+
+    bool palindromo = verificarPalindromo(entrada.toLowerCase());
+
+    if (palindromo) {
+      print("$entrada é um palíndromo.\n");
+    }
+
+    else {
+      print("$entrada não é um palíndromo\n");
+    }
+    
 }
 
 bool verificarPalindromo(String palavra) {
