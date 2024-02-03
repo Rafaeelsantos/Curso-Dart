@@ -1,8 +1,15 @@
+import 'dart:io';
+
 void main() {
-  int numeroDecimal = 67; // Substitua pelo número decimal desejado
+
+  stdout.write("\nInsira um valor decimal: ");
+
+  var linha = stdin.readLineSync()!;
+  var numeroDecimal = int.parse(linha);
+
   String binario = decimalParaBinario(numeroDecimal);
 
-  print("O número binário equivalente de $numeroDecimal é: $binario");
+  print("\nO número binário equivalente de $numeroDecimal é: $binario\n");
 }
 
 String decimalParaBinario(int numero) {
@@ -15,7 +22,7 @@ String decimalParaBinario(int numero) {
   while (numero > 0) {
     int resto = numero % 2;
     binario = resto.toString() + binario;
-    numero ~/= 2; // Divide por 2
+    numero ~/= 2;
   }
 
   return binario;
