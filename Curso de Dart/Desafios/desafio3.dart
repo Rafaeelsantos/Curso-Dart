@@ -1,12 +1,21 @@
+import 'dart:io';
+
 void main() {
-  String entrada = "Rafael";
+
+  stdout.write("\nDigite aqui: ");
+  
+  var linha = stdin.readLineSync()!;
+  var entrada = (linha);
+
   String reverterEntrada = invertString(entrada);
-  print("Original String: $entrada");
-  print("Reversed String: $reverterEntrada");
+
+  print("\nEntrada original: $entrada");
+  print("Entrada revertida: $reverterEntrada\n");
+
 }
 
-String invertString(String input) {
-  List<String> characters = input.split('');
-  characters = characters.reversed.toList();
-  return characters.join();
+String invertString(String entrada) {
+  List<String> caracteristicas = entrada.split('');
+  caracteristicas = caracteristicas.reversed.toList();
+  return caracteristicas.join();
 }
