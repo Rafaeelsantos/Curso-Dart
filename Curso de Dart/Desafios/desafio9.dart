@@ -1,15 +1,15 @@
 void main() {
-  List<int> listaValores = [5, 2, 8, 1, 7, 3]; // Substitua pela lista desejada
+  List<int> lista = [];
 
-  int menorNumero = encontrarMenorNumero(listaValores);
+  int menorNumero = encontrarMenorNumero(lista);
 
-  print("O menor número na lista é: $menorNumero");
+  print("\nO menor número na lista é: $menorNumero\n");
 }
 
 int encontrarMenorNumero(List<int> lista) {
   if (lista.isEmpty) {
-    print("A lista está vazia.");
-    return -1; // Valor de retorno indicando que a lista está vazia
+    print("\nA lista está vazia\n.");
+    return 0;
   }
 
   int menor = lista[0];
