@@ -1,9 +1,15 @@
+import 'dart:io';
+
 void main() {
-  int numero = 10;
+
+  stdout.write("\nInsira um valor: ");
+  var linha = stdin.readLineSync()!;
+  var numero = int.parse(linha);
 
   int fatorial = calcularFatorial(numero);
 
   print("O fatorial de $numero é: $fatorial");
+
 }
 
 int calcularFatorial(int numero) {
